@@ -1,7 +1,7 @@
 // ==UserScript==
 // @run-at       document-start
 // @name         NightMode for VK
-// @version      1.0.0.6
+// @version      1.0.1.0
 // @description  Adds a nice, black-whity night mode for vk.
 // @author       https://vk.com/id71110013
 // @homepage     https://github.com/NIK220V/vk-darkmode-css
