@@ -1,7 +1,7 @@
 // ==UserScript==
 // @run-at       document-start
 // @name         NightMode for VK
-// @version      1.1.0.9
+// @version      1.1.0.10
 // @description  Adds a nice, black-whity night mode for vk.
 // @author       https://vk.com/id71110013
 // @homepage     https://github.com/NIK220V/vk-darkmode-css
@@ -74,7 +74,7 @@ input, #page_header_cont .back, .page_block, .profile_info_header, .profile_info
 .media_voting {border: 1px black solid}
 /* == UI TRICKS == */
 .image_cover, .photos_choose_row, #top_notify_wrap, .photos_container .photos_row {border-radius: 5px;}
-.im_sticker_row {-webkit-filter: drop-shadow(3px 3px 0 #777777) drop-shadow(-3px -3px 0 #777777); filter: drop-shadow(3px 3px 0 #777777) drop-shadow(-3px -3px 0 #777777);}
+.im_sticker_row {filter:drop-shadow(1px 0 0 #eee) drop-shadow(-1px 0 0 #eee) drop-shadow(0 1px 0 #eee) drop-shadow(0 -1px 0 #eee); padding:1px;}
 .blocked_image, .groups_blocked_spamfight_img {filter: invert(0.861);}
 
 /* == SCREW DEFAULT API IMAGE == */
