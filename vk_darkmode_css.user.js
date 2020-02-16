@@ -1,7 +1,7 @@
 // ==UserScript==
 // @run-at       document-start
 // @name         NightMode for VK
-// @version      1.1.0.14
+// @version      1.1.0.15
 // @description  Adds a nice, black-whity night mode for vk.
 // @author       https://vk.com/id71110013
 // @homepage     https://github.com/NIK220V/vk-darkmode-css
@@ -77,7 +77,7 @@ input, #page_header_cont .back, .page_block, .profile_info_header, .profile_info
 .im_sticker_row {filter:drop-shadow(1px 0 0 #eee) drop-shadow(-1px 0 0 #eee) drop-shadow(0 1px 0 #eee) drop-shadow(0 -1px 0 #eee); padding:1px;}
 .blocked_image, .groups_blocked_spamfight_img {filter: invert(0.861);}
 .media_link__label, .media_link__media {border-radius: 0}
-.im-page .im-page--history_empty.im-page--history .im-page--center-empty, .im-page .im-page--history_empty.im-page--history .im-page--top-notice, .pv_cont .pv_closed_commments_placeholder { filter: grayscale(1) invert(0.862); }
+.im-page .im-page--history_empty.im-page--history .im-page--center-empty, .im-page .im-page--history_empty.im-page--history .im-page--top-notice, .pv_cont .pv_closed_commments_placeholder, img[src^="/images/camera_"], img[src^="/images/deactivated_"], img[src^="/images/community_"] { filter: grayscale(1) invert(0.862); }
 
 /* == SCREW DEFAULT API IMAGE == */
 .wall_post_source_icon {background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAMAAACecocUAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABU1BMVEUAAAD///8REREZGRkAAAAEBAQEBAQAAAAZGRkREREjIyMAAAALCwsPDg0OBQMPDg0LCwsAAAAjIyMUFBRTUVHQsKrQsKpTUVEUFBQFBQXj4eHt8PD/5N3/VjP/5N7t8PDj4eEFBQUAAACenp5hcnZhcnaenp4AAAAAAABdX2AHl7gHl7hdX2AAAAAAAABDQkIraXgyPkEyPkEraXhDQkIAAAAVFRXHvbuopqWfoKCopqXHvbsVFRUAAAC8vr9wcHFwcXG9v78AAAAAAAAEBATZ2dnf39/Z2dkEBAQAAAAAAAAAAAABAQEqKioqKioBAQEAAAAAAABGRkZGRkZCQkKyurzEIgKyurxCQkJxcXFxcXGIiIh6fH11Y2B6fH2IiIh1dHQHJSwAAAAHJi11dHR4eHgsJiR4eHiQkJCQkJBDQ0NKSUlCQkJubm5ubm5DQ0P///8TfFsbAAAAUnRSTlMAAMb6LwICL/rG75yLoJygi5zvtPv///u0svr7+/v7+/qytP3///20m/z///ybH+z+///+7CDN/f////3NfPn+/vl8B779//2+BwELi+vriwsBriooAgAAAAFiS0dEAf8CLd4AAAAHdElNRQfhDBYUKBWK4cYoAAAAhUlEQVQI1wXBQwICAAAEwM22bdu2bduu/9+aAZFEBgVU0OgMMIcsNofL4wtGQojG4olkKp3J5nIoFkqVWqPV6ZcGGFcm83qztVh3Ntj3DufheHK5zx54fRd/4BoM3cIREKL3WDyRTD3SBCDzzOZe+cK7CKBU/lSqtW+9ATTRand+3V4fgz8s+hhKWwGqOQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxNy0xMi0yMlQyMDo0MDoyMS0wNTowMAmNQVUAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTctMTItMjJUMjA6NDA6MjEtMDU6MDB40PnpAAAAAElFTkSuQmCC');}
