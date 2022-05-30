@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NightMode-Revamped for VK
 // @run-at       document-start
-// @version      2.0.1
+// @version      2.0.2
 // @description  Because you know you need it
 // @author       https://vk.com/id71110013
 // @homepage     https://github.com/NIK220V/vk-darkmode-css
@@ -129,7 +129,6 @@ class NightMode {
 .blocked_image, .groups_blocked_spamfight_img {filter: invert(0.861);}
 .media_link__label, .media_link__media {border-radius: 0}
 img[src^="/images/camera_"], img[src^="/images/deactivated_"], img[src^="/images/community_"] { filter: grayscale(1) invert(0.862); }
-[dir=ltr] .im-page--back-btn:hover {background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2216%22%20viewBox%3D%220%200%209%2016%22%20width%3D%229%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m8%2015.9c-.2%200-.4-.1-.6-.3l-7-7c-.3-.3-.3-.9%200-1.2l7-7c.3-.3.9-.3%201.2%200s.3.9%200%201.2l-6.4%206.4%206.4%206.4c.3.3.3.9%200%201.2-.2.2-.4.3-.6.3z%22%20fill%3D%22%23828a99%22%20opacity%3D%22.7%22%2F%3E%3C%2Fsvg%3E) 15px 16px no-repeat,linear-gradient(to right,#222 50%,rgba(0,0,0,.1))}
 /* == SCREW DEFAULT API IMAGE == */
 [dir=ltr] .wall_post_source_icon {background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAMAAACecocUAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABU1BMVEUAAAD///8REREZGRkAAAAEBAQEBAQAAAAZGRkREREjIyMAAAALCwsPDg0OBQMPDg0LCwsAAAAjIyMUFBRTUVHQsKrQsKpTUVEUFBQFBQXj4eHt8PD/5N3/VjP/5N7t8PDj4eEFBQUAAACenp5hcnZhcnaenp4AAAAAAABdX2AHl7gHl7hdX2AAAAAAAABDQkIraXgyPkEyPkEraXhDQkIAAAAVFRXHvbuopqWfoKCopqXHvbsVFRUAAAC8vr9wcHFwcXG9v78AAAAAAAAEBATZ2dnf39/Z2dkEBAQAAAAAAAAAAAABAQEqKioqKioBAQEAAAAAAABGRkZGRkZCQkKyurzEIgKyurxCQkJxcXFxcXGIiIh6fH11Y2B6fH2IiIh1dHQHJSwAAAAHJi11dHR4eHgsJiR4eHiQkJCQkJBDQ0NKSUlCQkJubm5ubm5DQ0P///8TfFsbAAAAUnRSTlMAAMb6LwICL/rG75yLoJygi5zvtPv///u0svr7+/v7+/qytP3///20m/z///ybH+z+///+7CDN/f////3NfPn+/vl8B779//2+BwELi+vriwsBriooAgAAAAFiS0dEAf8CLd4AAAAHdElNRQfhDBYUKBWK4cYoAAAAhUlEQVQI1wXBQwICAAAEwM22bdu2bduu/9+aAZFEBgVU0OgMMIcsNofL4wtGQojG4olkKp3J5nIoFkqVWqPV6ZcGGFcm83qztVh3Ntj3DufheHK5zx54fRd/4BoM3cIREKL3WDyRTD3SBCDzzOZe+cK7CKBU/lSqtW+9ATTRand+3V4fgz8s+hhKWwGqOQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxNy0xMi0yMlQyMDo0MDoyMS0wNTowMAmNQVUAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTctMTItMjJUMjA6NDA6MjEtMDU6MDB40PnpAAAAAElFTkSuQmCC');}
 a.im-mess-stack--lnk[href="/notqb"]::after{  content: '12345'; color: #1111; margin-left: 5px; margin-right: -22.5px; background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2012%2012%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m2.25%206.75%202.25%202.25%205.25-5.25%22%20fill%3D%22none%22%20stroke%3D%22%235c9ce6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%2F%3E%3C%2Fsvg%3E") no-repeat 0;
@@ -261,7 +260,7 @@ a.im-mess-stack--lnk[href="/notqb"]::after{  content: '12345'; color: #1111; mar
         head.appendChild(this.scheme);
         this.appended = true;
         this.intervalTask = setInterval(function(){
-            if (head.lastChild.id != nightmode.scheme.id)
+            if (nightmode.settings.isEnabled() && head.lastChild.id != nightmode.scheme.id)
                 nightmode.swapElements(nightmode.scheme, head.lastChild);
         }, 250);
     }
@@ -272,8 +271,6 @@ a.im-mess-stack--lnk[href="/notqb"]::after{  content: '12345'; color: #1111; mar
             let v = nightmode.getMenuElement();
             if (!v)
                 return;
-            v.appendChild(nightmode.nightModeSettingsDiv.firstChild);
-            nightmode.nightModeSettingsDiv.firstChild.remove();
             v.appendChild(nightmode.nightModeSettingsDiv.firstChild);
         }, 5000);
     }
@@ -314,7 +311,8 @@ XMLHttpRequest.prototype.send = function(vData) {
         if (vData.includes('a_start') && vData.includes('block')) // Silent community message reading
             vData = vData.replace('block=true', 'block=false');
         if (vData.includes('al=1') && vData.includes('hash=') && vData.includes('mode=') && (vData.includes('=dark') || vData.includes('=light'))){
-            nightmode.setEnabled(vData.includes('mode=dark'));  // Native vk nightmode change
+            nightmode.settings.setEnabled(vData.includes('mode=dark'));  // Native vk nightmode change
+            nightmode.settings.save();
             nightmode.apply();
         }
     }
