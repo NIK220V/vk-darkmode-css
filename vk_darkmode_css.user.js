@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NightMode-Revamped for VK
 // @run-at       document-start
-// @version      2.0.3
+// @version      2.0.4
 // @description  Because you know you need it
 // @author       https://vk.com/id71110013
 // @homepage     https://github.com/NIK220V/vk-darkmode-css
@@ -108,12 +108,15 @@ class NightMode {
 [scheme=vkcom_dark] {
   --accent: var(--okay_gray);
   --text_link: var(--linked_gray);
+  --vkui--color_text_link: var(--linked_gray);
   --text_subhead: var(--read_text);
+  --vkui--color_text_subhead: var(--read_text);
   --button_primary_background: var(--slightly_gray_hovered);
   --button_primary_foreground: var(--white);
   --background_page: var(--very_gray);
   --content_tint_background: var(--very_gray);
   --im_text_name: var(--read_text);
+  --vkui--vkontakte_color_im_text_name: var(--read_text);
   --link_alternate: var(--white);
   --button_secondary_background: var(--very_gray);
   --vkui--color_background_secondary: var(--very_gray);
@@ -126,7 +129,9 @@ class NightMode {
 }
 [scheme=vkcom_dark] .nim-dialog_unread, [scheme=vkcom_dark] .nim-dialog_unread-out {
   --text_subhead: var(--white);
+  --vkui--color_text_subhead: var(--white);
   --text_link: var(--white);
+  --vkui--color_text_link: var(--white);
 }
 .image_cover, .photos_choose_row, #top_notify_wrap, .photos_container .photos_row {border-radius: 5px;}
 .blocked_image, .groups_blocked_spamfight_img {filter: invert(0.861);}
