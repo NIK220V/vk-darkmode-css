@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NightMode-Revamped for VK
 // @run-at       document-start
-// @version      2.0.4
+// @version      2.0.5
 // @description  Because you know you need it
 // @author       https://vk.com/id71110013
 // @homepage     https://github.com/NIK220V/vk-darkmode-css
@@ -121,6 +121,9 @@ class NightMode {
   --button_secondary_background: var(--very_gray);
   --vkui--color_background_secondary: var(--very_gray);
   --blue_400: var(--okay_gray);
+}
+[scheme=vkcom_dark] .FlatButton--primary, [scheme=vkcom_dark] .Button--primary {
+  --vkui--color_text_contrast_themed: var(--white);
 }
 [scheme=vkcom_dark] #react_rootLeftMenuRoot > div > nav > ol {
   --text_primary: var(--okay_gray);
