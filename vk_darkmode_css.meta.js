@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NightMode-Revamped for VK
 // @run-at       document-start
-// @version      2.0.4
+// @version      2.0.5
 // @description  Because you know you need it
 // @author       https://vk.com/id71110013
 // @homepage     https://github.com/NIK220V/vk-darkmode-css
