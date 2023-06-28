@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NightMode-Revamped for VK
 // @run-at       document-start
-// @version      2.0.5
+// @version      2.0.6
 // @description  Because you know you need it
 // @author       https://vk.com/id71110013
 // @homepage     https://github.com/NIK220V/vk-darkmode-css
@@ -121,6 +121,9 @@ class NightMode {
   --button_secondary_background: var(--very_gray);
   --vkui--color_background_secondary: var(--very_gray);
   --blue_400: var(--okay_gray);
+  --vkui--color_icon_accent: var(--linked_gray_light);
+  --vkui--color_background_accent: var(--okay_gray);
+  --vkui--color_text_accent: var(--okay_gray);
 }
 [scheme=vkcom_dark] .FlatButton--primary, [scheme=vkcom_dark] .Button--primary {
   --vkui--color_text_contrast_themed: var(--white);
@@ -140,6 +143,7 @@ class NightMode {
 .blocked_image, .groups_blocked_spamfight_img {filter: invert(0.861);}
 .media_link__label, .media_link__media {border-radius: 0}
 img[src^="/images/camera_"], img[src^="/images/deactivated_"], img[src^="/images/community_"] { filter: grayscale(1) invert(0.862); }
+.redesigned-group-subscribed {color: var(--linked_gray_light);}
 /* == SCREW DEFAULT API IMAGE == */
 [dir=ltr] .wall_post_source_icon {background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAMAAACecocUAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABU1BMVEUAAAD///8REREZGRkAAAAEBAQEBAQAAAAZGRkREREjIyMAAAALCwsPDg0OBQMPDg0LCwsAAAAjIyMUFBRTUVHQsKrQsKpTUVEUFBQFBQXj4eHt8PD/5N3/VjP/5N7t8PDj4eEFBQUAAACenp5hcnZhcnaenp4AAAAAAABdX2AHl7gHl7hdX2AAAAAAAABDQkIraXgyPkEyPkEraXhDQkIAAAAVFRXHvbuopqWfoKCopqXHvbsVFRUAAAC8vr9wcHFwcXG9v78AAAAAAAAEBATZ2dnf39/Z2dkEBAQAAAAAAAAAAAABAQEqKioqKioBAQEAAAAAAABGRkZGRkZCQkKyurzEIgKyurxCQkJxcXFxcXGIiIh6fH11Y2B6fH2IiIh1dHQHJSwAAAAHJi11dHR4eHgsJiR4eHiQkJCQkJBDQ0NKSUlCQkJubm5ubm5DQ0P///8TfFsbAAAAUnRSTlMAAMb6LwICL/rG75yLoJygi5zvtPv///u0svr7+/v7+/qytP3///20m/z///ybH+z+///+7CDN/f////3NfPn+/vl8B779//2+BwELi+vriwsBriooAgAAAAFiS0dEAf8CLd4AAAAHdElNRQfhDBYUKBWK4cYoAAAAhUlEQVQI1wXBQwICAAAEwM22bdu2bduu/9+aAZFEBgVU0OgMMIcsNofL4wtGQojG4olkKp3J5nIoFkqVWqPV6ZcGGFcm83qztVh3Ntj3DufheHK5zx54fRd/4BoM3cIREKL3WDyRTD3SBCDzzOZe+cK7CKBU/lSqtW+9ATTRand+3V4fgz8s+hhKWwGqOQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxNy0xMi0yMlQyMDo0MDoyMS0wNTowMAmNQVUAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTctMTItMjJUMjA6NDA6MjEtMDU6MDB40PnpAAAAAElFTkSuQmCC');}
 a.im-mess-stack--lnk[href="/notqb"]::after{  content: '12345'; color: #1111; margin-left: 5px; margin-right: -22.5px; background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2012%2012%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m2.25%206.75%202.25%202.25%205.25-5.25%22%20fill%3D%22none%22%20stroke%3D%22%235c9ce6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%2F%3E%3C%2Fsvg%3E") no-repeat 0;
