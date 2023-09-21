@@ -127,6 +127,7 @@ class NightMode {
 }
 [scheme=vkcom_dark] .FlatButton--primary, [scheme=vkcom_dark] .Button--primary {
   --vkui--color_text_contrast_themed: var(--white);
+  --vkui--color_background_accent_themed: var(--very_gray);
 }
 [scheme=vkcom_dark] #react_rootLeftMenuRoot > div > nav > ol {
   --text_primary: var(--okay_gray);
